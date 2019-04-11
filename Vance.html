@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery.js"></script>
+    <style>
+
+        body{
+            background: url("sylvain-sarrailh-kamehousearstation.jpg") no-repeat fixed;
+            background-size: cover ;
+        }
+        .container{
+            display: none;
+            width: 300px;
+            position: fixed;
+            text-align: center;
+            right: 20px;
+            top: 20px;
+            padding: 15px;
+            -webkit-box-shadow: inset -30px 30px 50px -25px rgba(0,255,0,0.78);
+            -moz-box-shadow: inset -30px 30px 50px -25px rgba(0,255,0,0.78);
+            box-shadow: inset -30px 30px 50px -25px rgba(0,255,0,0.78);
+            border: 2px inset #00ff00;
+            background:-webkit-radial-gradient(circle farthest-side at center center, rgb(255, 255, 255) 0%, #00ff00 80%);
+            background:-o-radial-gradient(circle farthest-side at center center, rgb(255, 255, 255) 0%, #00ff00 80%);
+            background:-moz-radial-gradient(circle farthest-side at center center, rgb(255, 255, 255) 0%, #00ff00 80%);
+            background:radial-gradient(circle farthest-side at center center, rgb(255, 255, 255) 0%, #00ff00 80%);
+            border-radius:50px;
+            -moz-border-radius:50px;
+            -webkit-border-radius:50px;
+            color: #0379fd;
+         }
+        .btn{
+            background: #0379fd;
+            display:inline-block;
+            padding:15px;
+            border: 2px solid blue;
+            cursor: pointer;
+            -webkit-transition: background  200ms;
+            -moz-transition: background  200ms;
+            -ms-transition: background  200ms;
+            -o-transition: background  200ms;
+            transition: background  200ms;
+        }
+        .btn:hover{
+            background: lime;
+        }
+        .btn:active{
+            background: #00ac00;
+        }
+        .close{
+            float: right;
+            cursor: pointer;
+        }
+        .block{
+            background: green;
+            border: 1px solid red;
+            width:100px;
+            height:100px;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $('#Open').click(function(){
+                $('.container').fadeIn(300);
+            });
+            $('#close').click(function(){
+                $('.container').fadeOut(300);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="btn" id="Open">Открыть</div>
+
+    <div class="container">
+        <h1>Блок №1</h1>
+        <div class="close" id="close">X</div>
+        <audio ></audio>
+    </div>
+</body>
+</html>

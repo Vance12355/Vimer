@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery.js"></script>
+    <style>
+        .content{
+            margin: auto;
+            max-width:1200px;
+            backgound:white;
+            padding:20px;
+            -webkit-box-shadow:0px 0px 50px 30px #836969 ;
+            -moz-box-shadow:0px 0px 50px 30px #836969 ;
+            box-shadow:0px 0px 50px 30px #836969 ;
+            background: aqua;
+            border-radius:30px;
+            -moz-border-radius:30px;
+            -webkit-border-radius:30px;
+        }
+        .products{
+            display:flex;
+            justify-content:space-between;
+            flex-direction: row;
+            margin-bottom: 20px;
+
+            text-align: center;
+        }
+        .block{
+            background:gray;
+            border:1px solid #504e4f;
+            width:32%;
+            text-align: center;
+            font-size:40px;
+            border-radius:30px;
+            -moz-border-radius:30px;
+            -webkit-border-radius:30px;
+        }
+        .container{
+            display: none;
+            width: 300px;
+            position: fixed;
+            text-align: center;
+            right: 20px;
+            top: 20px;
+            padding: 15px;
+            background: #bfb8a0;
+        }
+        .close{
+            float: right;
+            cursor: pointer;
+        }
+        .Buy{
+            margin:auto;
+            width:50%;
+            cursor: pointer;
+            text-align: center;
+        }
+
+
+        @media (max-width:640px) {
+
+            .products{
+                flex-direction: column;
+            }
+            .block{
+                width:100%;
+                margin-bottom:10px;
+            }
+            .block:last-child{
+                margin-bottom:0;
+            }
+            .products:last-child{
+                margin-bottom:0;
+            }
+        }
+
+    </style>
+    <script>
+        $(document).ready(function(){
+            $('#buy').click(function(){
+                $('.container').fadeIn(300);
+            });
+            $('#buy2').click(function(){
+                $('.container').fadeIn(300);
+            });
+            $('#buy3').click(function(){
+                $('.container').fadeIn(300);
+            });
+            $('#buy4').click(function(){
+                $('.container').fadeIn(300);
+            });
+            $('#buy5').click(function(){
+                $('.container').fadeIn(300);
+            });
+            $('#buy6').click(function(){
+                $('.container').fadeIn(300);
+            });
+
+            $('#close').click(function(){
+                $('.container').fadeOut(300);
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="container">
+    <div class="close" id="close">X</div>
+    <h1>Thanks for purchase.</h1>
+</div>
+
+<div class="content">
+    <div class="products">
+        <div class="block">
+            Бармаглот
+            <img src="Бармаглот.jpg" height=80% width=80%/>
+            <div class="Buy" id="buy">Заказать.</div>
+        </div>
+        <div class="block">
+            Некотяй
+
+            <img src="250px-Некотяй_от_Самки_Контролера.jpeg" height=80% width=80%/>
+            <div class="Buy" id="buy2">Заказать.</div></div>
+        <div class="block">
+            Гребубля
+
+            <img src="250px-Гребубля_by_Лиира.png" height=80% width=80%/>
+            <div class="Buy" id="buy3">Заказать.</div></div>
+    </div>
+
+    <div class="products">
+        <div class="block">
+            Вездекот
+
+            <img src="250px-Вездекот_by_Божок_Дарсия.png" height=80% width=80%/>
+            <div class="Buy" id="buy4">Заказать.</div></div>
+        <div class="block">
+            Гипнокот
+
+            <img src="250px-Гипнокот_by_Лисото.jpg" height=80% width=80%/>
+            <div class="Buy" id="buy5">Заказать.</div></div>
+        <div class="block">
+            Ботаноед
+
+            <img src="250px-Ботаноед-by-Ddx1.jpg" height=80% width=80%/>
+
+            <div class="Buy" id="buy6">Заказать.</div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
